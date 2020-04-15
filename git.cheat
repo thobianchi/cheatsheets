@@ -1,0 +1,6 @@
+% git
+
+# Revert amend commit
+git reset --soft HEAD@{1}
+
+
