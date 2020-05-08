@@ -1,0 +1,10 @@
+% openssl, certificate
+
+# Extract the private key form a PFX to a PEM file
+openssl pkcs12 -in <filename.pfx> -nocerts -nodes -out <key.pem>
+
+# Extract the certificate from a PFX to a PEM file
+openssl pkcs12 -in <filename.pfx> -clcerts -nokeys -out <cert.pem>
+
+# View a certificate from PEM to Human Readeable
+openssl x509 -in <cert.pem> -text -noout
