@@ -1,0 +1,5 @@
+
+% pwgen
+
+# generate single random string 128 long
+pwgen -s -1 128
