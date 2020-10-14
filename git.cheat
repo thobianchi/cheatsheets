@@ -1,6 +1,10 @@
 % git
 
-# Revert amend commit
+# Delete last commit staging files inside, also in case of amending already pushed commits
 git reset --soft HEAD@{1}
 
+# Delete local branch
+git branch -d <branch-name>
 
+# Delete remote branch
+git push origin --delete <branch-name>
