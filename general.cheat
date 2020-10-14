@@ -5,6 +5,7 @@ rsync -zavh --progress <src> <dst>
 % btrfs, snapshot
 # Take a snapshot read only
 sudo btrfs subvolume snapshot -r /home /home/.snapshots/home.$(date +%Y-%m-%d)
+
 # Send the difference to another drive
 sudo btrfs send -p /home/.snapshots/{previous} /home/.snapshots/{new-one} | btrfs receive /run/media/thobianchi/backups/home
 
