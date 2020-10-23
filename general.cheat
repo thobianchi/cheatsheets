@@ -12,6 +12,9 @@ sudo btrfs send -p /home/.snapshots/{previous} /home/.snapshots/{new-one} | sudo
 # Delete snapshot
 sudo btrfs subvolume delete /home/.snapshots/{to_delete}
 
+# Balance chunks 85%
+sudo btrfs balance start -dusage=85 /
+
 % navi, cheat, cheatsheet
 # Add this cheatsheet
 navi repo add thobianchi/cheatsheets
