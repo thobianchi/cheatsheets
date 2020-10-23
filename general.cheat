@@ -7,7 +7,10 @@ rsync -zavh --progress <src> <dst>
 sudo btrfs subvolume snapshot -r /home /home/.snapshots/home.$(date +%Y-%m-%d)
 
 # Send the difference to another drive
-sudo btrfs send -p /home/.snapshots/{previous} /home/.snapshots/{new-one} | btrfs receive /run/media/thobianchi/backups/home
+sudo btrfs send -p /home/.snapshots/{previous} /home/.snapshots/{new-one} | sudo btrfs receive /run/media/thobianchi/backups/home
+
+# Delete snapshot
+sudo btrfs subvolume delete /home/.snapshots/{to_delete}
 
 % navi, cheat, cheatsheet
 # Add this cheatsheet
