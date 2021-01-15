@@ -18,3 +18,7 @@ sudo btrfs balance start -dusage=85 /
 % navi, cheat, cheatsheet
 # Add this cheatsheet
 navi repo add thobianchi/cheatsheets
+
+% dig, dns
+# Get all DNS record for a domain
+dig +nocmd <domain> any +multiline +noall +answer
