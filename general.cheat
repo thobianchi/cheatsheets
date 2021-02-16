@@ -22,3 +22,7 @@ navi repo add thobianchi/cheatsheets
 % dig, dns
 # Get all DNS record for a domain
 dig +nocmd <domain> any +multiline +noall +answer
+
+% ssh, known_hosts
+# Remove an entry from known_hosts for "host key have changed"
+ssh-keygen -R <hostname>
