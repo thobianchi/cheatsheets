@@ -26,3 +26,7 @@ dig +nocmd <domain> any +multiline +noall +answer
 % ssh, known_hosts
 # Remove an entry from known_hosts for "host key have changed"
 ssh-keygen -R <hostname>
+
+% ssh, gpg-agent
+# List ssh keys fingerprint with gpg keygrip
+echo KEYINFO --ssh-list --ssh-fpr | gpg-connect-agent
