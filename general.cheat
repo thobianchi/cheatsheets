@@ -30,3 +30,8 @@ ssh-keygen -R <hostname>
 % ssh, gpg-agent
 # List ssh keys fingerprint with gpg keygrip
 echo KEYINFO --ssh-list --ssh-fpr | gpg-connect-agent
+
+% battery, tlp
+# Temporary recharge full battery ignore thresholds
+sudo tlp fullcharge
+
