@@ -35,3 +35,10 @@ echo KEYINFO --ssh-list --ssh-fpr | gpg-connect-agent
 # Temporary recharge full battery ignore thresholds
 sudo tlp fullcharge
 
+% monitor, ddcutil
+# Get external monitor current Brightness
+sudo ddcutil getvcp 10
+
+% monitor, ddcutil
+# Set external monitor current Brightness
+sudo ddcutil setvcp 10 <brightness>
