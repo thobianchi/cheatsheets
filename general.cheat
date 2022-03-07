@@ -42,3 +42,11 @@ sudo ddcutil getvcp 10
 % monitor, ddcutil
 # Set external monitor current Brightness
 sudo ddcutil setvcp 10 <brightness>
+
+% nmap
+# Ping rapidly a subnet
+nmap -sn -PE -T5 -oG - 10.2.0.0/16
+
+% nmap
+# TCP scan a host
+nmap -Pn- -T5 10.1.1.1
