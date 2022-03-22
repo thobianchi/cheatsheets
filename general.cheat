@@ -50,3 +50,8 @@ nmap -sn -PE -T5 -oG - 10.2.0.0/16
 % nmap
 # TCP scan a host
 nmap -Pn- -T5 10.1.1.1
+
+% youtube-dl
+# Download multiple url in specific path keeping title and extention
+youtube-dl -o /tmp/%(title)s-%(id)s.%(ext)s 
+
