@@ -58,3 +58,7 @@ youtube-dl -o /tmp/%(title)s-%(id)s.%(ext)s
 % decode, jwt
 # Decode jwt from command line
 jq -R 'split(".") | select(length > 0) | .[0],.[1] | @base64d | fromjson' <<< <token>
+
+% decode, helm, secret
+# Decode helm secret  
+kubectl get secret sh.helm.release.v1.release-name.v1 -o yaml | grep -oP '(?<=release: ).*' | base64 -d | base64 -d | gzip -d > secret.decoded.yaml
