@@ -66,3 +66,7 @@ kubectl get secret sh.helm.release.v1.release-name.v1 -o yaml | grep -oP '(?<=re
 % dnf
 # List user installed packages only
 dnf repoquery --userinstalled --qf "%{name}" | tr  '\n' ' '
+
+% bash, http
+# HTTP GET without tools using echo /dev/tcp
+echo -e "GET / HTTP/1.0\r\nHost: www.google.com\r\n\r" >&3; cat <&3 ; } 3<> /dev/tcp/www.google.com/80
