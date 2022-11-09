@@ -70,3 +70,8 @@ dnf repoquery --userinstalled --qf "%{name}" | tr  '\n' ' '
 % bash, http
 # HTTP GET without tools using echo /dev/tcp
 echo -e "GET / HTTP/1.0\r\nHost: www.google.com\r\n\r" >&3; cat <&3 ; } 3<> /dev/tcp/www.google.com/80
+
+% ffmpeg
+# Re-encode video with hardware VAAPI support and compress
+ffmpeg -vaapi_device /dev/dri/renderD128 -i input.mp4 -vf 'format=nv12,hwupload' -c:v h264_vaapi -qp 25 output.mp4
+
